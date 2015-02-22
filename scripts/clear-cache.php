@@ -1,6 +1,6 @@
 <?php
 // Include Magento
-require_once dirname(__FILE__).'/app/Mage.php';
+require_once dirname(__FILE__).'..//app/Mage.php';
 Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
 // Set user admin session
 $userModel = Mage::getModel('admin/user');
