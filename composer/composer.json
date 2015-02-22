@@ -1,0 +1,22 @@
+{
+  "minimum-stability":"stable",
+  "require":{
+    "magento-hackathon/magento-composer-installer": "*",
+    "n98/magerun":"*",
+    "colinmollenhour/modman":"*",
+    "aoepeople/aoe_templatehints":"*",
+    "aoepeople/Aoe_Scheduler":"*"
+  },
+    
+   "repositories":[    
+    {
+      "type":"composer",
+      "url":"http://packages.firegento.com"
+    }
+  ],
+  "extra":{
+    "magento-root-dir":"../magento",
+    "magento-deploystrategy":"copy",
+    "magento-force": "override"    
+  }
+}
