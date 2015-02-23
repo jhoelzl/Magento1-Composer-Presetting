@@ -1,6 +1,6 @@
 <?php
 // Include Magento
-require_once dirname(__FILE__).'..//app/Mage.php';
+require_once dirname(__FILE__).'/app/Mage.php';
 Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
 // Set user admin session
 $userModel = Mage::getModel('admin/user');
@@ -15,10 +15,12 @@ foreach(Mage::helper('core')->getCacheTypes() as $type => $label){
 }
 Mage::app()->saveUseCache($enable);
 // Refresh cache's
-echo 'Refreshing cache...';
+echo 'Refreshing cache...
+';
 try {
     Mage::getSingleton('catalog/url')->refreshRewrites();
-    echo 'Catalog Rewrites was refreshed successfully';
+    echo 'Catalog Rewrites was refreshed successfully
+    ';
 } catch ( Exception $e ) {
     echo 'Error in Catalog Rewrites: '.$e->getMessage();
 }
@@ -36,45 +38,52 @@ try {
         $kill->setFlagData($flag->getFlagData())->save();
     }
     $flag->setState(Mage_CatalogIndex_Model_Catalog_Index_Flag::STATE_QUEUED)->save();
-    Mage::getSingleton('catalogindex/indexer')->plainReindex();
-    echo 'Layered Navigation Indices was refreshed successfully';
+    //Mage::getSingleton('catalogindex/indexer')->plainReindex();
+    //echo 'Layered Navigation Indices was refreshed successfully';
 } catch ( Exception $e ) {
     echo 'Error in Layered Navigation Indices: '.$e->getMessage();
 }
 try {
     Mage::getModel('catalog/product_image')->clearCache();
-    echo 'Image cache was cleared successfully';
+    echo 'Image cache was cleared successfully
+    ';
 } catch ( Exception $e ) {
     echo 'Error in Image cache: '.$e->getMessage();
 }
 try {
     Mage::getSingleton('catalogsearch/fulltext')->rebuildIndex();
-    echo 'Search Index was rebuilded successfully';
+    echo 'Search Index was rebuilded successfully
+    ';
 } catch ( Exception $e ) {
     echo 'Error in Search Index: '.$e->getMessage();
 }
 try {
     Mage::getSingleton('cataloginventory/stock_status')->rebuild();
-    echo 'CatalogInventory Stock Status was rebuilded successfully';
+    echo 'CatalogInventory Stock Status was rebuilded successfully
+    ';
 } catch ( Exception $e ) {
     echo 'Error in CatalogInventory Stock Status: '.$e->getMessage();
 }
 try {
     Mage::getResourceModel('catalog/category_flat')->rebuild();
-    echo 'Flat Catalog Category was rebuilt successfully';
+    echo 'Flat Catalog Category was rebuilt successfully
+    ';
 } catch ( Exception $e ) {
     echo 'Error in Flat Catalog Category: '.$e->getMessage();
 }
 try {
     Mage::getResourceModel('catalog/product_flat_indexer')->rebuild();
-    echo 'Flat Catalog Product was rebuilt successfully';
+    echo 'Flat Catalog Product was rebuilt successfully
+    ';
 } catch ( Exception $e ) {
     echo 'Error in Flat Catalog Product: '.$e->getMessage();
 }
-echo 'Cache cleared';
+echo 'Cache cleared
+';
 // Rebuild indexes
-echo 'Rebuilding indexes';
-for ($i = 1; $i <= 9; $i++) {
+echo 'Rebuilding indexes
+';
+for ($i = 1; $i <= 8; $i++) {
     $process = Mage::getModel('index/process')->load($i);
     try {
         $process->reindexAll();
@@ -82,5 +91,7 @@ for ($i = 1; $i <= 9; $i++) {
         echo 'Error rebuilding index '.$i.': '.$e->getMessage();
     }
 }
-echo 'Indexes rebuilt';
-echo 'Finished!';
+echo 'Indexes rebuilt
+';
+echo 'Finished!
+';
