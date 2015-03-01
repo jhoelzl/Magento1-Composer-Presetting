@@ -3,6 +3,7 @@
   "require":{
     "magento-hackathon/magento-composer-installer": "*",
     "n98/magerun":"*",
+    "kalenjordan/magerun-addons":"*",
     "colinmollenhour/modman":"*",
     "aoepeople/aoe_templatehints":"*",
     "aoepeople/Aoe_Scheduler":"*",
