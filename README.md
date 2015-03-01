@@ -1,2 +1,2 @@
 # Magento-Presettings
-Some presetting for Magento 1.9.x
+Some presetting for Magento 1.9.x using Composer
