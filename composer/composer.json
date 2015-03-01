@@ -5,7 +5,8 @@
     "n98/magerun":"*",
     "colinmollenhour/modman":"*",
     "aoepeople/aoe_templatehints":"*",
-    "aoepeople/Aoe_Scheduler":"*"
+    "aoepeople/Aoe_Scheduler":"*",
+    "yireo/yireo_disablelog":"*"
   },
     
    "repositories":[    
