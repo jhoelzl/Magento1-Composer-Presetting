@@ -1,4 +1,5 @@
 {
+  "name": "jhoelzl/magento1",
   "minimum-stability":"stable",
   "require":{
     "magento-hackathon/magento-composer-installer": "*",
