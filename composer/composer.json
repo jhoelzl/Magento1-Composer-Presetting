@@ -15,7 +15,8 @@
     "connect20/shopgo_gtm": "*",
     "firegento/magesetup": "*",
     "gordonlesti/lesti_fpc":"*",
-    "avstudnitz/scopehint":"*"
+    "avstudnitz/scopehint":"*",
+    "mage-eag/mage-enhanced-admin-grids":"*"
   },
     
    "repositories":[    
