@@ -11,7 +11,7 @@ Mage::app()->cleanCache();
 // Enable all cache types
 $enable = array();
 foreach(Mage::helper('core')->getCacheTypes() as $type => $label){
-    $enable[$type] = 1;
+   // $enable[$type] = 1;
 }
 Mage::app()->saveUseCache($enable);
 // Refresh cache's
